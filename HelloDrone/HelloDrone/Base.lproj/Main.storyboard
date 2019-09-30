@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HelloDrone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="MR0-71-Dxt">
+                                <rect key="frame" x="20" y="44" width="374" height="100"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q3A-5C-F6n">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drone" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NOl-sw-Bb6" userLabel="Drone">
+                                                <rect key="frame" x="0.0" y="0.0" width="124.5" height="50"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="state" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wuj-8M-3TB" userLabel="DroneStateTxt">
+                                                <rect key="frame" x="124.5" y="0.0" width="125" height="50"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RGp-uB-3vl" userLabel="DroneBatteryTxt">
+                                                <rect key="frame" x="249.5" y="0.0" width="124.5" height="50"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="NOl-sw-Bb6" firstAttribute="width" secondItem="Wuj-8M-3TB" secondAttribute="width" id="NJB-8Z-vwJ"/>
+                                            <constraint firstItem="Wuj-8M-3TB" firstAttribute="width" secondItem="RGp-uB-3vl" secondAttribute="width" id="aMD-6S-DMN"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SNP-iJ-qLQ">
+                                        <rect key="frame" x="0.0" y="50" width="374" height="50"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remote" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y0b-51-L2A" userLabel="Remote">
+                                                <rect key="frame" x="0.0" y="0.0" width="124.5" height="50"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="state" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2i2-ey-Lyy" userLabel="RemoteStateTxt">
+                                                <rect key="frame" x="124.5" y="0.0" width="125" height="50"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1J4-Rx-WdZ" userLabel="RemoteBatteryTxt">
+                                                <rect key="frame" x="249.5" y="0.0" width="124.5" height="50"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="2i2-ey-Lyy" firstAttribute="width" secondItem="1J4-Rx-WdZ" secondAttribute="width" id="bCn-nT-eBC"/>
+                                            <constraint firstItem="Y0b-51-L2A" firstAttribute="width" secondItem="2i2-ey-Lyy" secondAttribute="width" id="u1f-ra-Y4z"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <glkView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" enableSetNeedsDisplay="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6IX-yR-G3c" userLabel="StreamView" customClass="GSStreamView">
+                                <rect key="frame" x="0.0" y="144" width="414" height="670"/>
+                            </glkView>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SAJ-d1-Dbr" userLabel="TakeOffLandBt">
+                                <rect key="frame" x="0.0" y="814" width="414" height="48"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <string key="label" base64-UTF8="YES">
+CA
+</string>
+                                </accessibility>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <state key="normal" title="TakeOff"/>
+                                <connections>
+                                    <action selector="takeOffLandBtAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MmD-Rf-bYT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6IX-yR-G3c" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="9JZ-FW-e8D"/>
+                            <constraint firstItem="SAJ-d1-Dbr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="DBU-xM-CZM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SAJ-d1-Dbr" secondAttribute="trailing" id="EXM-SE-wnq"/>
+                            <constraint firstItem="SAJ-d1-Dbr" firstAttribute="top" secondItem="6IX-yR-G3c" secondAttribute="bottom" id="InQ-D5-S8j"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6IX-yR-G3c" secondAttribute="trailing" id="MFH-nl-PIq"/>
+                            <constraint firstItem="6IX-yR-G3c" firstAttribute="top" secondItem="MR0-71-Dxt" secondAttribute="bottom" id="NDt-hk-wO8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="SAJ-d1-Dbr" secondAttribute="bottom" id="VHm-1R-kNG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MR0-71-Dxt" secondAttribute="trailing" constant="20" id="dmI-6e-hIi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="MR0-71-Dxt" secondAttribute="top" id="q2x-kf-6K0"/>
+                            <constraint firstItem="MR0-71-Dxt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="rSs-Rd-JcB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="droneBatteryTxt" destination="RGp-uB-3vl" id="PEL-oA-hwr"/>
+                        <outlet property="droneStateTxt" destination="Wuj-8M-3TB" id="N69-Ak-Yqz"/>
+                        <outlet property="remoteBatteryTxt" destination="1J4-Rx-WdZ" id="Iqj-9f-6bL"/>
+                        <outlet property="remoteStateTxt" destination="2i2-ey-Lyy" id="8p9-az-odE"/>
+                        <outlet property="streamView" destination="6IX-yR-G3c" id="UGH-Ll-XJ0"/>
+                        <outlet property="takeOffLandBt" destination="SAJ-d1-Dbr" id="nLg-am-qsX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="139"/>
+        </scene>
+    </scenes>
+</document>
