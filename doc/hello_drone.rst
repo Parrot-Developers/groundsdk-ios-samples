@@ -2,7 +2,7 @@ GroundSdk Hello Drone Tutorial
 ==============================
 
 *GroundSdk Hello Drone Tutorial* is a step-by-step guide that helps you
-develop an iOS application using GroundSdk iOS 1.1.0.
+develop an iOS application using GroundSdk iOS 1.1.1.
 This application is able to connect to an Anafi drone and a Skycontroller 3
 remote control, display the battery level and video stream, and take off or
 land the drone.
@@ -10,7 +10,7 @@ land the drone.
 At the end of this tutorial, you will be able to:
 
 - Setup your developement environment
-- Setup your project to use GroundSdk iOS 1.1.0
+- Setup your project to use GroundSdk iOS 1.1.1
 - Connect to a drone
 - Display drone connection state
 - Display drone battery level
@@ -22,7 +22,7 @@ At the end of this tutorial, you will be able to:
 
 The full project is available `here <https://github.com/Parrot-Developers/groundsdk-ios-samples/tree/master/HelloDrone>`__.
 
-.. Note:: This tutorial is based on GroundSdk iOS version `1.1.0`.
+.. Note:: This tutorial is based on GroundSdk iOS version `1.1.1`.
 
 Prerequisites
 ^^^^^^^^^^^^^
@@ -87,9 +87,9 @@ Replace all content with:
 
     target 'HelloDrone' do
         use_frameworks!
-        pod 'GroundSdk', '1.1.0'
-        pod 'ArsdkEngine', '1.1.0'
-        pod 'SdkCore', '1.1.0'
+        pod 'GroundSdk', '1.1.1'
+        pod 'ArsdkEngine', '1.1.1'
+        pod 'SdkCore', '1.1.1'
     end
 
 .. Note: replace `HelloDrone` by your own project name.
