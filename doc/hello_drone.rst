@@ -2,7 +2,7 @@ GroundSdk Hello Drone Tutorial
 ==============================
 
 *GroundSdk Hello Drone Tutorial* is a step-by-step guide that helps you
-develop an iOS application using GroundSdk iOS 1.1.1.
+develop an iOS application using GroundSdk iOS |version|.
 This application is able to connect to an Anafi drone and a Skycontroller 3
 remote control, display the battery level and video stream, and take off or
 land the drone.
@@ -10,7 +10,7 @@ land the drone.
 At the end of this tutorial, you will be able to:
 
 - Setup your developement environment
-- Setup your project to use GroundSdk iOS 1.1.1
+- Setup your project to use GroundSdk iOS |version|
 - Connect to a drone
 - Display drone connection state
 - Display drone battery level
@@ -22,7 +22,7 @@ At the end of this tutorial, you will be able to:
 
 The full project is available `here <https://github.com/Parrot-Developers/groundsdk-ios-samples/tree/master/HelloDrone>`__.
 
-.. Note:: This tutorial is based on GroundSdk iOS version `1.1.1`.
+.. Note:: This tutorial is based on GroundSdk iOS version |version|.
 
 Prerequisites
 ^^^^^^^^^^^^^
@@ -81,15 +81,15 @@ editing:
 
 Replace all content with:
 
-.. code-block:: console
+.. substitution-code-block:: ruby
 
     platform :ios, '10.0'
 
     target 'HelloDrone' do
         use_frameworks!
-        pod 'GroundSdk', '1.1.1'
-        pod 'ArsdkEngine', '1.1.1'
-        pod 'SdkCore', '1.1.1'
+        pod 'GroundSdk', '|version|'
+        pod 'ArsdkEngine', '|version|'
+        pod 'SdkCore', '|version|'
     end
 
 .. Note: replace `HelloDrone` by your own project name.
@@ -106,6 +106,23 @@ still in the directory containing the `HelloDrone` project and Podfile:
 
 **Open the project folder using Finder, and open the new
 `HelloDrone.xcworkspace` file created by CocoaPods.**
+
+.. Note::
+   In case your deployment target is `iOS 13`, you also need to do the following:
+
+   - Remove `SceneDelegate.swift` file source.
+
+   - In Info.plist file, remove the entry `Application Scene Manifest`
+
+   - In `AppDelegate.swift` file:
+
+      - Add `var window: UIWindow?` under the line `class AppDelegate: UIResponder, UIApplicationDelegate {`
+
+      - Remove functions:
+
+           - `func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration`
+
+           - `func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>)`
 
 Your project setup is ready, let's start coding!
 
@@ -298,7 +315,7 @@ And in your `ViewController` you should have:
 .. literalinclude:: ../HelloDrone/HelloDrone/ViewController.swift
    :language: swift
    :lines: 68-74, 79-80
-   :emphasize-lines: 8-
+   :emphasize-lines: 2-3
 
 .. _StreamView: https://developer.parrot.com/docs/refdoc-ios/Classes/StreamView.html
 
