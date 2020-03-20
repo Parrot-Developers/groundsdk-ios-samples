@@ -1,7 +1,2 @@
 project: GroundSdk iOS Samples
 out_dir: groundsdk-ios-samples
-python_path:
-    - $ROOT
-custom_config:
-    extensions:
-        - sphinx-ext

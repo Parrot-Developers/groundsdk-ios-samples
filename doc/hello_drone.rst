@@ -81,18 +81,10 @@ editing:
 
 Replace all content with:
 
-.. substitution-code-block:: ruby
+.. literalinclude:: ../HelloDrone/Podfile
+   :language: ruby
 
-    platform :ios, '10.0'
-
-    target 'HelloDrone' do
-        use_frameworks!
-        pod 'GroundSdk', '|version|'
-        pod 'ArsdkEngine', '|version|'
-        pod 'SdkCore', '|version|'
-    end
-
-.. Note: replace `HelloDrone` by your own project name.
+.. Note:: replace `HelloDrone` by your own project name.
 
 Save and close the Podfile.
 
