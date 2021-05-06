@@ -1,0 +1,4 @@
+Pods/*
+Podfile.lock
+ReadFrameMetadataV3.xcworkspace/*
+.DS_Store

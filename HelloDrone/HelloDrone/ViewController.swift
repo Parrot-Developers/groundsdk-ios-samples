@@ -33,7 +33,7 @@ import GroundSdk
 
 /// GroundSdk Hello Drone Sample
 ///
-/// This activity allows the application to connect to a drone and/or a remote control.
+/// This view controller allows the application to connect to a drone and/or a remote control.
 /// It displays the connection state, battery level and video stream.
 /// It allows to take off and land by button click.
 class ViewController: UIViewController {

@@ -99,22 +99,23 @@ still in the directory containing the `HelloDrone` project and Podfile:
 **Open the project folder using Finder, and open the new
 `HelloDrone.xcworkspace` file created by CocoaPods.**
 
-.. Note::
-   In case your deployment target is `iOS 13`, you also need to do the following:
+Allow Network Discovery
+-----------------------
 
-   - Remove `SceneDelegate.swift` file source.
+You need to setup your project to allow device network discovery.
 
-   - In Info.plist file, remove the entry `Application Scene Manifest`
+Add to your `Info.plist` file a new array with
+`Bonjour services` as key and add string items
+with services types to allow as value.
 
-   - In `AppDelegate.swift` file:
+* `_arsdk-0914._udp.` for Anafi 4K
+* `_arsdk-0919._udp.` for Anafi Thermal
+* `_arsdk-091b._udp.` for Anafi UA
+* `_arsdk-091e._udp.` for Anafi USA
 
-      - Add `var window: UIWindow?` under the line `class AppDelegate: UIResponder, UIApplicationDelegate {`
+Your `Info.plist` file should now look like this:
 
-      - Remove functions:
-
-           - `func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration`
-
-           - `func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>)`
+.. image:: resources/HelloDrone/bonjour_services_plist.png
 
 Your project setup is ready, let's start coding!
 

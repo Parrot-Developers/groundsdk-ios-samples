@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ThermalVideoStreamEmbedded" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Qbi-7y-qsq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="2At-mV-iuM">
+                                <rect key="frame" x="19.5" y="44" width="375" height="532"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="quF-5g-4QV">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="532"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drone" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K9P-eH-VHc" userLabel="Drone">
+                                                <rect key="frame" x="0.0" y="0.0" width="125" height="532"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="state" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ymn-6K-agL" userLabel="DroneStateTxt">
+                                                <rect key="frame" x="125" y="0.0" width="125" height="532"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mKp-Ek-JCg" userLabel="DroneBatteryTxt">
+                                                <rect key="frame" x="250" y="0.0" width="125" height="532"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="K9P-eH-VHc" firstAttribute="width" secondItem="ymn-6K-agL" secondAttribute="width" id="MnM-gz-r2v"/>
+                                            <constraint firstItem="ymn-6K-agL" firstAttribute="width" secondItem="mKp-Ek-JCg" secondAttribute="width" id="iQ3-6D-8OO"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <glkView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" enableSetNeedsDisplay="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EK0-AY-3nO" userLabel="StreamView" customClass="ThermalStreamView" customModule="GroundSdk">
+                                <rect key="frame" x="0.0" y="576" width="414" height="286"/>
+                            </glkView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="F8m-Vp-o9C" userLabel="Palettes Selection">
+                                <rect key="frame" x="0.0" y="831" width="414" height="32"/>
+                                <segments>
+                                    <segment title="Relative"/>
+                                    <segment title="Spot"/>
+                                </segments>
+                                <connections>
+                                    <action selector="paletteSelectionChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="1dG-Uf-BKN"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="GXP-Ge-J9i"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="F8m-Vp-o9C" firstAttribute="width" secondItem="GXP-Ge-J9i" secondAttribute="width" id="JN0-lN-c6o"/>
+                            <constraint firstItem="F8m-Vp-o9C" firstAttribute="centerX" secondItem="GXP-Ge-J9i" secondAttribute="centerX" id="TSP-31-QFB"/>
+                            <constraint firstItem="EK0-AY-3nO" firstAttribute="bottom" secondItem="F8m-Vp-o9C" secondAttribute="bottom" id="VIh-T6-ZLj"/>
+                            <constraint firstItem="GXP-Ge-J9i" firstAttribute="bottom" secondItem="F8m-Vp-o9C" secondAttribute="bottom" id="Xli-wP-oPa"/>
+                            <constraint firstItem="2At-mV-iuM" firstAttribute="width" secondItem="GXP-Ge-J9i" secondAttribute="width" multiplier="0.905797" id="c8y-XE-glx"/>
+                            <constraint firstItem="EK0-AY-3nO" firstAttribute="centerX" secondItem="GXP-Ge-J9i" secondAttribute="centerX" id="haS-aE-uRc"/>
+                            <constraint firstItem="EK0-AY-3nO" firstAttribute="width" secondItem="GXP-Ge-J9i" secondAttribute="width" id="rga-Nu-BBa"/>
+                            <constraint firstItem="EK0-AY-3nO" firstAttribute="top" secondItem="2At-mV-iuM" secondAttribute="bottom" id="u2A-QK-a2u"/>
+                            <constraint firstItem="2At-mV-iuM" firstAttribute="top" secondItem="GXP-Ge-J9i" secondAttribute="top" id="xyd-H1-Z02"/>
+                            <constraint firstItem="2At-mV-iuM" firstAttribute="centerX" secondItem="GXP-Ge-J9i" secondAttribute="centerX" id="yIH-kq-33L"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="droneStateTxt" destination="mKp-Ek-JCg" id="hSf-Ig-nZG"/>
+                        <outlet property="palettesSelection" destination="F8m-Vp-o9C" id="wlD-79-8gc"/>
+                        <outlet property="streamView" destination="EK0-AY-3nO" id="f5v-bM-Pu1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20" y="94"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

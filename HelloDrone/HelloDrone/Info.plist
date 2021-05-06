@@ -41,6 +41,13 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSBonjourServices</key>
+	<array>
+		<string>_arsdk-0914._udp.</string>
+		<string>_arsdk-0919._udp.</string>
+		<string>_arsdk-091b._udp.</string>
+		<string>_arsdk-091e._udp.</string>
+	</array>
 	<key>UISupportedExternalAccessoryProtocols</key>
 	<array>
 		<string>com.parrot.dronesdk</string>

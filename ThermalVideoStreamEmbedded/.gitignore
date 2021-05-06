@@ -1,0 +1,4 @@
+Pods/*
+Podfile.lock
+ThermalVideoStreamEmbedded.xcworkspace/*
+.DS_Store

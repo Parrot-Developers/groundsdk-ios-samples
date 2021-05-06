@@ -1,3 +1,4 @@
 /Pods/*
 Podfile.lock
 HelloDrone.xcworkspace/*
+.DS_Store

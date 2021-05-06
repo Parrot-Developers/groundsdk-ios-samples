@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2EAE79E840859D0E72758384 /* Pods_HelloDrone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FECE6320EF60F2964DC77E48 /* Pods_HelloDrone.framework */; };
 		9B9ACF902338B32E0042D1BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9ACF8F2338B32E0042D1BD /* AppDelegate.swift */; };
 		9B9ACF922338B32E0042D1BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9ACF912338B32E0042D1BD /* ViewController.swift */; };
 		9B9ACF952338B32E0042D1BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B9ACF932338B32E0042D1BD /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4597B94EABC33D4E89818635 /* Pods-HelloDrone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloDrone.release.xcconfig"; path = "Target Support Files/Pods-HelloDrone/Pods-HelloDrone.release.xcconfig"; sourceTree = "<group>"; };
 		9B9ACF8C2338B32E0042D1BD /* HelloDrone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloDrone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B9ACF8F2338B32E0042D1BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9B9ACF912338B32E0042D1BD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +24,8 @@
 		9B9ACF962338B32E0042D1BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9B9ACF992338B32E0042D1BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9B9ACF9B2338B32E0042D1BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4B62899F9C17671D411A202 /* Pods-HelloDrone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloDrone.debug.xcconfig"; path = "Target Support Files/Pods-HelloDrone/Pods-HelloDrone.debug.xcconfig"; sourceTree = "<group>"; };
+		FECE6320EF60F2964DC77E48 /* Pods_HelloDrone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HelloDrone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EAE79E840859D0E72758384 /* Pods_HelloDrone.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5803444A855EAC5448AFCD32 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FECE6320EF60F2964DC77E48 /* Pods_HelloDrone.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6976D91DEF7A7AA9DABF2491 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F4B62899F9C17671D411A202 /* Pods-HelloDrone.debug.xcconfig */,
+				4597B94EABC33D4E89818635 /* Pods-HelloDrone.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		9B9ACF832338B32E0042D1BD = {
 			isa = PBXGroup;
 			children = (
 				9B9ACF8E2338B32E0042D1BD /* HelloDrone */,
 				9B9ACF8D2338B32E0042D1BD /* Products */,
+				6976D91DEF7A7AA9DABF2491 /* Pods */,
+				5803444A855EAC5448AFCD32 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +96,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9B9ACF9E2338B32E0042D1BD /* Build configuration list for PBXNativeTarget "HelloDrone" */;
 			buildPhases = (
+				F6167166173283A73E015C2C /* [CP] Check Pods Manifest.lock */,
 				9B9ACF882338B32E0042D1BD /* Sources */,
 				9B9ACF892338B32E0042D1BD /* Frameworks */,
 				9B9ACF8A2338B32E0042D1BD /* Resources */,
+				16683AF98AE4F603BBA49802 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +156,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		16683AF98AE4F603BBA49802 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HelloDrone/Pods-HelloDrone-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HelloDrone/Pods-HelloDrone-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HelloDrone/Pods-HelloDrone-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F6167166173283A73E015C2C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HelloDrone-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9B9ACF882338B32E0042D1BD /* Sources */ = {
@@ -280,6 +349,7 @@
 		};
 		9B9ACF9F2338B32E0042D1BD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F4B62899F9C17671D411A202 /* Pods-HelloDrone.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -299,6 +369,7 @@
 		};
 		9B9ACFA02338B32E0042D1BD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4597B94EABC33D4E89818635 /* Pods-HelloDrone.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

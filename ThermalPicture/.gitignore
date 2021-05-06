@@ -1,0 +1,4 @@
+Pods/*
+Podfile.lock
+ThermalPicture.xcworkspace/*
+.DS_Store
