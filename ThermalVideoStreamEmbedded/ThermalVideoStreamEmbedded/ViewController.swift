@@ -65,7 +65,7 @@ class ViewController: UIViewController {
     /// Drone state text view.
     @IBOutlet weak var droneStateTxt: UILabel!
     /// Video thermal stream view.
-    @IBOutlet weak var streamView: ThermalStreamView!
+    @IBOutlet weak var streamView: StreamView!
     /// Palettes Segment control.
     @IBOutlet weak var palettesSelection: UISegmentedControl!
 
@@ -74,7 +74,7 @@ class ViewController: UIViewController {
     private var relativePalette : ThermalRelativePalette!
     /// Spot thermal palette.
     private var spotPalette : ThermalSpotPalette!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -149,7 +149,7 @@ class ViewController: UIViewController {
             // Not used when the thermal is blending on drone.
             highestTemp: 0.0)
     }
-    
+
     /// Initialize spot thermal palette.
     private func initSpotThermalPalette() {
         // Create a Spot thermal palette:
@@ -165,7 +165,7 @@ class ViewController: UIViewController {
             //     - Green as color of the lower palette boundary.
             //     - Orange as color of the higher palette boundary.
             colors: [ThermalColor(0.0, 1.0, 0.0, 0.0), ThermalColor(1.0, 0.5, 0.0, 1.0)],
-            
+
             // Highlight temperature higher than the threshold.
             type: .hot,
             // `type: .cold` to highlight temperature lower than the threshold.
@@ -173,7 +173,7 @@ class ViewController: UIViewController {
             // Set the threshold at the 60% of the temperature range of the rendered scene.
             threshold: 0.6)
     }
-    
+
     /// Resets  user interface part.
     private func resetUi() {
         // Reset drone user interface views.
@@ -283,7 +283,7 @@ class ViewController: UIViewController {
             }
 
             // Send thermal render settings.
-            if let self = self, let thermalCtrl = thermalCtrl{
+            if let self = self, let thermalCtrl = thermalCtrl {
                 self.sendThermalRenderSettings(thermalCtrl: thermalCtrl)
             }
         }
@@ -315,18 +315,6 @@ class ViewController: UIViewController {
         // Force the stream server enabling.
         streamServerRef?.value?.enabled = true
 
-        // Set thermal camera model to use according to the drone model.
-        self.streamView.thermalCamera = {
-            switch drone?.model {
-            case .anafiThermal:
-                return ThermalProcThermalCamera.lepton
-            case .anafiUa, .anafiUsa:
-                return ThermalProcThermalCamera.boson
-            default:
-                return ThermalProcThermalCamera.lepton
-            }
-        } ()
-
         // Play the live stream.
         _ = liveStream.play()
     }
@@ -347,7 +335,7 @@ class ViewController: UIViewController {
                 self.droneStateTxt.text = state.connectionState.description
 
                 // Send thermal render settings.
-                if let thermalCtrl = self.thermalCtrlRef?.value{
+                if let thermalCtrl = self.thermalCtrlRef?.value {
                     self.sendThermalRenderSettings(thermalCtrl: thermalCtrl)
                 }
             }
@@ -391,7 +379,7 @@ class ViewController: UIViewController {
 
         self.droneThermalRenderInitialized = true
     }
-    
+
     /// Called when palette selection changed.
     @IBAction func paletteSelectionChanged(_ sender: Any) {
         // Send the new thermal palette according to the selection.

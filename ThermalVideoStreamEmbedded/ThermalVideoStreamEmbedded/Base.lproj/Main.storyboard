@@ -48,7 +48,7 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <glkView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" enableSetNeedsDisplay="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EK0-AY-3nO" userLabel="StreamView" customClass="ThermalStreamView" customModule="GroundSdk">
+                            <glkView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" enableSetNeedsDisplay="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EK0-AY-3nO" userLabel="StreamView" customClass="GSStreamView">
                                 <rect key="frame" x="0.0" y="576" width="414" height="286"/>
                             </glkView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="F8m-Vp-o9C" userLabel="Palettes Selection">
@@ -80,7 +80,7 @@
                     <connections>
                         <outlet property="droneStateTxt" destination="mKp-Ek-JCg" id="hSf-Ig-nZG"/>
                         <outlet property="palettesSelection" destination="F8m-Vp-o9C" id="wlD-79-8gc"/>
-                        <outlet property="streamView" destination="EK0-AY-3nO" id="f5v-bM-Pu1"/>
+                        <outlet property="streamView" destination="EK0-AY-3nO" id="WP8-Q3-dU6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
