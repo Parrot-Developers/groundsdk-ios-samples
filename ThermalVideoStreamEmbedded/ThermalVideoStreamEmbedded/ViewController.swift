@@ -33,6 +33,7 @@ import UIKit
 import GroundSdk
 
 /// GroundSdk Thermal Video Stream Embedded Sample
+/// This sample is designed to drones  AnafiThermal, AnafiUSA and AnafiUA.
 ///
 /// This activity allows the application to connect to a drone.
 /// It displays the connection state and the thermal video stream

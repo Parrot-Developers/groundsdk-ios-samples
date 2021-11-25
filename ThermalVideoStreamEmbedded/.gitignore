@@ -1,4 +1,5 @@
 Pods/*
 Podfile.lock
 ThermalVideoStreamEmbedded.xcworkspace/*
-.DS_Store
+xcuserdata/
+*.DS_Store

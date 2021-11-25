@@ -33,6 +33,7 @@ import UIKit
 import GroundSdk
 
 /// GroundSdk Read Frame metadataV3 Sample.
+/// This sample is designed to drones Anafi4K, AnafiThermal, AnafiUSA and AnafiUA.
 ///
 /// This view controller allows the application to connect to a drone.
 /// It displays the connection state, the video stream and
@@ -66,7 +67,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         // Set stream view overlayer.
-        streamView.overlayer2 = self
+        streamView.overlayer = self
 
         // Reset user interface
         resetDroneUi()
@@ -167,7 +168,7 @@ class ViewController: UIViewController {
 }
 
 // Overlayer extention
-extension ViewController: Overlayer2 {
+extension ViewController: Overlayer {
     func overlay(overlayContext: OverlayContext) {
         // Called at each frame rendering.
 

@@ -13,12 +13,14 @@
 	<key>CFBundleName</key>
 	<string>$(PRODUCT_NAME)</string>
 	<key>CFBundlePackageType</key>
-	<string>APPL</string>
+	<string>$(PRODUCT_BUNDLE_PACKAGE_TYPE)</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
@@ -43,11 +45,11 @@
 	</array>
 	<key>NSBonjourServices</key>
 	<array>
-		<string>_arsdk-0914._udp.</string>
 		<string>_arsdk-0919._udp.</string>
-		<string>_arsdk-091b._udp.</string>
-		<string>_arsdk-091e._udp.</string>
 		<string>_arsdk-091a._udp.</string>
+		<string>_arsdk-091e._udp.</string>
+		<string>_arsdk-091b._udp.</string>
+		<string>_arsdk-0914._udp.</string>
 	</array>
 	<key>UISupportedExternalAccessoryProtocols</key>
 	<array>

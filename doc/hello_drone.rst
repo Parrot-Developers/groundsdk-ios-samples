@@ -1,16 +1,16 @@
-GroundSdk Hello Drone Tutorial
-==============================
+Ground SDK Hello Drone Tutorial
+===============================
 
-*GroundSdk Hello Drone Tutorial* is a step-by-step guide that helps you
-develop an iOS application using GroundSdk iOS |version|.
-This application is able to connect to an Anafi drone and a Skycontroller 3
+*Ground SDK Hello Drone Tutorial* is a step-by-step guide that helps you
+develop an iOS application using Ground SDK iOS |version|.
+This application is able to connect to an ANAFI drone and a Skycontroller 
 remote control, display the battery level and video stream, and take off or
 land the drone.
 
 At the end of this tutorial, you will be able to:
 
 - Setup your developement environment
-- Setup your project to use GroundSdk iOS |version|
+- Setup your project to use Ground SDK iOS |version|
 - Connect to a drone
 - Display drone connection state
 - Display drone battery level
@@ -22,7 +22,7 @@ At the end of this tutorial, you will be able to:
 
 The full project is available `here <https://github.com/Parrot-Developers/groundsdk-ios-samples/tree/master/HelloDrone>`__.
 
-.. Note:: This tutorial is based on GroundSdk iOS version |version|.
+.. Note:: This tutorial is based on Ground SDK iOS version |version|.
 
 Prerequisites
 ^^^^^^^^^^^^^
@@ -41,19 +41,19 @@ Before starting this tutorial, you have to:
 Setup project
 ^^^^^^^^^^^^^
 
-First you need to configure your project to use GroundSdk iOS Pods.
+First you need to configure your project to use Ground SDK iOS Pods.
 
 Cocoapods install
 -----------------
 
-To install Cocoapods, open a Terminal and execute the folowing command.
+To install Cocoapods, open a Terminal and execute the following command.
 
 .. code-block:: console
 
     $ sudo gem install cocoapods
 
-Adding GroundSdk Pods
----------------------
+Adding Ground SDK Pods
+----------------------
 
 Open `Terminal` and navigate to the directory that contains
 your `HelloDrone` by using the `cd` command:
@@ -112,6 +112,7 @@ with services types to allow as value.
 * `_arsdk-0919._udp.` for Anafi Thermal
 * `_arsdk-091b._udp.` for Anafi UA
 * `_arsdk-091e._udp.` for Anafi USA
+* `_arsdk-091a._udp.` for Anafi Ai
 
 Your `Info.plist` file should now look like this:
 
@@ -119,10 +120,10 @@ Your `Info.plist` file should now look like this:
 
 Your project setup is ready, let's start coding!
 
-GroundSdk instance
-^^^^^^^^^^^^^^^^^^
+Ground SDK instance
+^^^^^^^^^^^^^^^^^^^
 
-In order to use GroundSdk in your application, you first have to create
+In order to use Ground SDK in your application, you first have to create
 an keep a `GroundSdk`_ instance. So open your ViewController file, and add:
 
 .. literalinclude:: ../HelloDrone/HelloDrone/ViewController.swift
@@ -416,7 +417,7 @@ You can find the full project on `github`_.
 
 Please feel free to ask questions on the `Parrot forum for developers`_.
 
-Wish you all the best with `GroundSdk <https://developer.parrot.com/>`__!
+Wish you all the best with `Ground SDK <https://developer.parrot.com/>`__!
 
 .. _github: https://github.com/Parrot-Developers/groundsdk-ios-samples/tree/master/HelloDrone
 .. _Parrot forum for developers: https://forum.developer.parrot.com/
