@@ -420,4 +420,4 @@ Please feel free to ask questions on the `Parrot forum for developers`_.
 Wish you all the best with `Ground SDK <https://developer.parrot.com/>`__!
 
 .. _github: https://github.com/Parrot-Developers/groundsdk-ios-samples/tree/master/HelloDrone
-.. _Parrot forum for developers: https://forum.developer.parrot.com/
+.. _Parrot forum for developers: https://www.parrot.com/fr/drones/anafi-ai/technical-documentation/sdk
